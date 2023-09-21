@@ -1,0 +1,15 @@
+|CODE 2002
+|MSG SQLSTATE[HY000] [2002] No such file or directory
+|FILE /var/www/html/froxlor/lib/Froxlor/Database/Database.php
+|LINE 518
+|TRACE
+#0 /var/www/html/froxlor/lib/Froxlor/Database/Database.php(518): PDO->__construct()
+#1 /var/www/html/froxlor/lib/Froxlor/Database/Database.php(592): Froxlor\Database\Database::getDB()
+#2 /var/www/html/froxlor/lib/Froxlor/Cli/CliCommand.php(48): Froxlor\Database\Database::__callStatic()
+#3 /var/www/html/froxlor/lib/Froxlor/Cli/MasterCron.php(63): Froxlor\Cli\CliCommand->validateRequirements()
+#4 /var/www/html/froxlor/vendor/symfony/console/Command/Command.php(298): Froxlor\Cli\MasterCron->execute()
+#5 /var/www/html/froxlor/vendor/symfony/console/Application.php(1040): Symfony\Component\Console\Command\Command->run()
+#6 /var/www/html/froxlor/vendor/symfony/console/Application.php(301): Symfony\Component\Console\Application->doRunCommand()
+#7 /var/www/html/froxlor/vendor/symfony/console/Application.php(171): Symfony\Component\Console\Application->doRun()
+#8 /var/www/html/froxlor/bin/froxlor-cli(64): Symfony\Component\Console\Application->run()
+#9 {main}

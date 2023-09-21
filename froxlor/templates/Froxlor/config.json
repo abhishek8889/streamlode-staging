@@ -1,0 +1,35 @@
+{
+	"variants": {
+		"default": {
+			"img": {
+				"login": "logo.png",
+				"ui": "logo_white.png"
+			},
+			"css": [
+				"main.css",
+				"custom.css"
+			],
+			"js": [
+				"main.js",
+				"apikey.js"
+			],
+			"description": "Default"
+		},
+		"dark": {
+			"img": {
+				"login": "logo_white.png",
+				"ui": "logo_white.png"
+			},
+			"css": [
+				"dark.css",
+				"custom.css"
+			],
+			"js": [
+				"main.js",
+				"apikey.js"
+			],
+			"description": "Darkmode"
+		}
+	},
+	"author": "Froxlor"
+}

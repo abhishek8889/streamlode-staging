@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex, nofollow, noarchive"/>
+	<meta name="googlebot" content="nosnippet"/>
+	<link rel="icon" type="image/x-icon" href="{{ basehref|default('') }}templates/Froxlor/assets/img/icon.png">
+	{% if csrf_token %}<meta name="csrf-token" content="{{ csrf_token }}" />{% endif %}
+
+	<!-- CSS -->
+	{% if theme_css is empty %}
+		<link href="{{ basehref|default('') }}{{ mix('templates/Froxlor/assets/css/main.css') }}" rel="stylesheet" type="text/css" />
+	{% else %}
+		{{ theme_css|raw }}
+	{% endif %}
+	{% block custom_css %}{% endblock %}
+
+	<!-- Scripts -->
+	{% if theme_js is empty %}
+		<script type="text/javascript" src="{{ basehref|default('') }}{{ mix('templates/Froxlor/assets/js/main.js') }}"></script>
+	{% else %}
+		{{ theme_js|raw }}
+	{% endif %}
+	{% block custom_js %}{% endblock %}
+	<title>Froxlor{% if page_title %} | {{ page_title }}{% endif %}</title>
+</head>
+<body class="min-vh-100 d-flex flex-column">
+	{% block navigation %}{% endblock %}
+
+	{% block body %}
+		<div class="container-fluid">
+			{% block content %}{% endblock %}
+			{{ include('Froxlor/footer.html.twig') }}
+		</div>
+	{% endblock %}
+</body>
+</html>
